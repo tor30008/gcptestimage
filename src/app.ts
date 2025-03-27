@@ -21,7 +21,7 @@ app.get('/querytest',async(req:Request,res:Response) => {
 LEFT JOIN public."InvoiceLine" on public."InvoiceLine"."TrackId" = public."Track"."TrackId"
 LEFT JOIN public."Invoice" on public."Invoice"."InvoiceId" = public."InvoiceLine"."InvoiceId"
 LEFT JOIN public."PlaylistTrack" on public."PlaylistTrack"."TrackId" = public."Track"."TrackId"
-LEFT JOIN public."Playlist" on public."Playlist"."PlaylistId" = public."Playlist"."PlaylistId"`);
+LEFT JOIN public."Playlist" on public."Playlist"."PlaylistId" = public."Playlist"."PlaylistId" limit 1000`);
     res.json(result.rows);
     console.log(result.rows.length)
 })
