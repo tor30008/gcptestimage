@@ -8,7 +8,8 @@ const HOST = '0.0.0.0';
 
 const dbPosgre = new Pool ({
     user: 'hqdb',         // ชื่อผู้ใช้ของ PostgreSQL
-    host: '34.122.63.201',            // ที่อยู่ของเซิร์ฟเวอร์ PostgreSQL (ใช้ localhost หากเป็นเครื่องตัวเอง)
+    host: `/cloudsql/serene-bazaar-454806-u7:us-central1:hqdb`,
+    //host: '34.122.63.201',            // ที่อยู่ของเซิร์ฟเวอร์ PostgreSQL (ใช้ localhost หากเป็นเครื่องตัวเอง)
     database: 'hqdb',     // ชื่อฐานข้อมูล
     password: 'kGjPqTl3f!',     // รหัสผ่านของผู้ใช้
     port: 5432,                   // พอร์ตเริ่มต้นของ PostgreSQL คือ 5432
